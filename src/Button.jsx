@@ -1,7 +1,9 @@
-function Button({ languages, setTitle, setDesc }) {
-    function changeCard(newTitle, newDesc) {
+function Button({ languages, setTitle, setDesc, setSelectedButton, selectedButton }) {
+    
+    function changeCard(newTitle, newDesc, button) {
         setTitle(newTitle);
         setDesc(newDesc);
+        setSelectedButton(button);
     }
 
     return (
@@ -11,10 +13,12 @@ function Button({ languages, setTitle, setDesc }) {
                 return (
                     <li key={i}>
                         <button
+                            className={selectedButton === i ? "selected" : null}
                             onClick={() => {
                                 changeCard(
                                     language.title,
-                                    language.description
+                                    language.description, 
+                                    i
                                 );
                             }}
                         >

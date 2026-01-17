@@ -13,31 +13,12 @@ function App() {
             <h1>Learn Web Development</h1>
 
             <ul className="flex">
-                {/* Stampa in pagina i bottoni
-                {languages.map((language, i) => {
-                    return (
-                        <li key={i}>
-                            <button
-                                className={
-                                    selectedButton === i ? "selected" : null
-                                }
-                                onClick={() => {
-                                    changeCard(
-                                        language.title,
-                                        language.description,
-                                        i,
-                                    );
-                                }}
-                            >
-                                {language.title}
-                            </button>
-                        </li>
-                    );
-                })} */}
                 <Button
                     languages={languages}
                     setTitle={setTitle}
                     setDesc={setDesc}
+                    setSelectedButton={setSelectedButton}
+                    selectedButton={selectedButton}
                 />
             </ul>
 
