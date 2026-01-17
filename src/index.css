@@ -4,3 +4,20 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(61, 61, 255);
+    color: white;
+}
