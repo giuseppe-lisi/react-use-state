@@ -20,7 +20,7 @@ function App() {
                 {/* Stampa in pagina i bottoni */}
                 {languages.map((language, i) => {
                     return (
-                        <li key={language.id}>
+                        <li key={i}>
                             <button
                                 className={selectedButton === i ? "selected" : null}
                                 onClick={() => {
