@@ -1,7 +1,9 @@
 import { useState } from "react";
 import languages from "./assets/data/languages";
+import Card from "./Card";
 
 function App() {
+    
     function changeCard(newTitle, newDesc, button) {
         setTitle(newTitle);
         setDesc(newDesc);
@@ -22,12 +24,14 @@ function App() {
                     return (
                         <li key={i}>
                             <button
-                                className={selectedButton === i ? "selected" : null}
+                                className={
+                                    selectedButton === i ? "selected" : null
+                                }
                                 onClick={() => {
                                     changeCard(
                                         language.title,
                                         language.description,
-                                        i
+                                        i,
                                     );
                                 }}
                             >
@@ -38,11 +42,7 @@ function App() {
                 })}
             </ul>
 
-            {/* Card Div */}
-            <div className="card">
-                <h2>{title}</h2>
-                <p>{desc}</p>
-            </div>
+            <Card title={title} desc={desc}/>
         </>
     );
 }
