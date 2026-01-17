@@ -21,3 +21,7 @@ button {
     background-color: rgb(61, 61, 255);
     color: white;
 }
+
+.selected {
+    background-color: rgb(255, 213, 46);
+}
