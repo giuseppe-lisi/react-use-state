@@ -1,9 +1,10 @@
 import { useState } from "react";
+import languages from "./assets/data/languages";
 
 function App() {
     return (
         <>
-            <div>funziono!</div>
+            <button>bottone 1</button>
         </>
     )
 }
