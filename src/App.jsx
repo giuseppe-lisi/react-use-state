@@ -4,7 +4,7 @@ import Card from "./Card";
 import Button from "./Button";
 
 function App() {
-    const [selectedButton, setSelectedButton] = useState(0);
+    const [selectedButton, setSelectedButton] = useState(null);
 
     return (
         <>
@@ -19,8 +19,8 @@ function App() {
             </ul>
 
             <Card
-                title={languages[selectedButton].title}
-                desc={languages[selectedButton].description}
+                title={selectedButton != null ? languages[selectedButton].title : ""}
+                desc={selectedButton != null ? languages[selectedButton].description : "nessun linguaggio selezionato"}
             />
         </>
     );
