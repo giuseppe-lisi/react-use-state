@@ -4,9 +4,7 @@ import Card from "./Card";
 import Button from "./Button";
 
 function App() {
-    const [title, setTitle] = useState("");
-    const [desc, setDesc] = useState("nessun linguaggio selezionato");
-    const [selectedButton, setSelectedButton] = useState(null);
+    const [selectedButton, setSelectedButton] = useState(0);
 
     return (
         <>
@@ -15,14 +13,15 @@ function App() {
             <ul className="flex">
                 <Button
                     languages={languages}
-                    setTitle={setTitle}
-                    setDesc={setDesc}
                     setSelectedButton={setSelectedButton}
                     selectedButton={selectedButton}
                 />
             </ul>
 
-            <Card title={title} desc={desc} />
+            <Card
+                title={languages[selectedButton].title}
+                desc={languages[selectedButton].description}
+            />
         </>
     );
 }

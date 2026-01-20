@@ -1,4 +1,4 @@
-function Card({ title, desc }) {
+function Card( {title, desc} ) {
     
     return (
         <div className="card">

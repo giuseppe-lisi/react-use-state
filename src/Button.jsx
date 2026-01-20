@@ -1,11 +1,4 @@
-function Button({ languages, setTitle, setDesc, setSelectedButton, selectedButton }) {
-    
-    function changeCard(newTitle, newDesc, button) {
-        setTitle(newTitle);
-        setDesc(newDesc);
-        setSelectedButton(button);
-    }
-
+function Button({ languages, setSelectedButton, selectedButton }) {
     return (
         <>
             {/* Stampa in pagina i bottoni */}
@@ -15,11 +8,7 @@ function Button({ languages, setTitle, setDesc, setSelectedButton, selectedButto
                         <button
                             className={selectedButton === i ? "selected" : null}
                             onClick={() => {
-                                changeCard(
-                                    language.title,
-                                    language.description, 
-                                    i
-                                );
+                                setSelectedButton(i);
                             }}
                         >
                             {language.title}
